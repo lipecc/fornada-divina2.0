@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fornada Divina - Sabor em Cada Mordida</title>
+     <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Fornada Divina</h1>
+            <p>Sabor em Cada Mordida</p>
+            <div id="cart-icon">
+                🛒
+                <span id="cart-count">0</span>
+                <a href="index.html" class="back-button">Voltar</a>
+            </div>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="#sucos">Sucos</a></li>
+                <li><a href="#refrigerantes">Refrigerantes</a></li>
+                <li><a href="#salgados">Salgados</a></li>
+                <li><a href="#doces">Doces</a></li>
+            </ul>
+        </nav>
+    
+        <div class="container">
+            <section id="sucos" class="menu-section">
+                <h2>Sucos</h2>
+                <div class="menu-item">
+                    <img src="images/suco-laranja.jpg" alt="Copo de suco de laranja fresco com fatias de laranja, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Laranja</h3>
+                        <p>Suco natural de laranja, espremido na hora.</p>
+                        <button class="add-to-cart" data-name="Suco de Laranja" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/suco-abacaxi.jpg" alt="Copo de suco de abacaxi com folhas de hortelã, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Abacaxi com Hortelã</h3>
+                        <p>Refrescante suco de abacaxi com um toque de hortelã.</p>
+                        <button class="add-to-cart" data-name="Suco de Abacaxi com Hortelã" data-price="6.00">Adicionar - R$6,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/suco-acerola.jpg" alt="Copo de suco de acerola com folhas frescas, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Acerola</h3>
+                        <p>Suco rico em vitamina C, feito com acerolas frescas.</p>
+                        <button class="add-to-cart" data-name="Suco de Acerola" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-maracuja.jpg" alt="Copo de suco de maracujá com sementes e polpa, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Maracujá</h3>
+                        <p>Suco tropical e refrescante de maracujá.</p>
+                        <button class="add-to-cart" data-name="Suco de Maracujá" data-price="6.00">Adicionar - R$6,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-melancia.jpg" alt="Copo de suco de melancia com fatias frescas, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Melancia</h3>
+                        <p>Refrescante suco de melancia, perfeito para dias quentes.</p>
+                        <button class="add-to-cart" data-name="Suco de Melancia" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-morango.jpg" alt="Copo de suco de morango com morangos frescos, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Morango</h3>
+                        <p>Delicioso suco de morango natural, adoçado com mel.</p>
+                        <button class="add-to-cart" data-name="Suco de Morango" data-price="6.00">Adicionar - R$6,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-limao.jpg" alt="Copo de suco de limão com hortelã, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Limonada Suíça</h3>
+                        <p>Refrescante limonada com um toque de hortelã.</p>
+                        <button class="add-to-cart" data-name="Limonada Suíça" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-manga.jpg" alt="Copo de suco de manga com pedaços da fruta, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Manga</h3>
+                        <p>Suco tropical de manga, cremoso e refrescante.</p>
+                        <button class="add-to-cart" data-name="Suco de Manga" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-uva.jpg" alt="Copo de suco de uva com uvas frescas, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Uva Integral</h3>
+                        <p>Suco de uva 100% natural, sem adição de açúcar.</p>
+                        <button class="add-to-cart" data-name="Suco de Uva Integral" data-price="6.50">Adicionar - R$6,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-caja.jpg" alt="Copo de suco de caju com fatias de fruta, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Caju</h3>
+                        <p>Refrescante suco de caju, cheio de sabor tropical.</p>
+                        <button class="add-to-cart" data-name="Suco de Caju" data-price="6.00">Adicionar - R$6,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-pitanga.jpg" alt="Copo de suco de pitanga com folhas frescas, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Pitanga</h3>
+                        <p>Sabor intenso e exótico da pitanga, para os amantes de frutas.</p>
+                        <button class="add-to-cart" data-name="Suco de Pitanga" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-groselha.jpg" alt="Copo de suco de groselha, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Groselha</h3>
+                        <p>Suco refrescante de groselha, um clássico amado por todos.</p>
+                        <button class="add-to-cart" data-name="Suco de Groselha" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/suco-maracuja.jpg" alt="Copo de suco de maracujá com sementes e polpa, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Suco de Maracujá</h3>
+                        <p>Suco tropical e refrescante de maracujá.</p>
+                        <button class="add-to-cart" data-name="Suco de Maracujá" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="refrigerantes" class="menu-section">
+                <h2>Refrigerantes</h2>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-cola.jpg" alt="Garrafa de refrigerante de cola com gelo em copo, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Cola Gelada</h3>
+                        <p>Clássico refrigerante de cola, servido bem gelado.</p>
+                        <button class="add-to-cart" data-name="Cola Gelada" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-guarana.jpg" alt="Lata de refrigerante de guaraná com gotas de água, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Guaraná Brasileiro</h3>
+                        <p>Autêntico refrigerante de guaraná, sabor único.</p>
+                        <button class="add-to-cart" data-name="Guaraná Brasileiro" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-laranja.jpg" alt="Garrafa de refrigerante de laranja com rodelas de laranja, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Laranja Refrescante</h3>
+                        <p>Refrigerante de laranja, sabor cítrico e revigorante.</p>
+                        <button class="add-to-cart" data-name="Laranja Refrescante" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-limao.jpg" alt="Lata de refrigerante de limão com gotas de água, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Limonada Gasosa</h3>
+                        <p>Refrigerante de limão, refrescante e levemente ácido.</p>
+                        <button class="add-to-cart" data-name="Limonada Gasosa" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-suco-laranja.jpg" alt="Lata de refrigerante de laranja com design moderno, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Fanta Laranja</h3>
+                        <p>Refresco sabor laranja, irrestível e muito prazeroso.</p>
+                        <button class="add-to-cart" data-name="Fanta Laranja" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-limao.jpg" alt="Lata de refrigerante de limão com gotas de água, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Sprite</h3>
+                        <p>Refrigerante de limão com um toque de menta.</p>
+                        <button class="add-to-cart" data-name="Sprite" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-cerveja.jpg" alt="Garrafa de cerveja, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Cerveja Loura</h3>
+                        <p>Refrescante cerveja clara, perfeita para acompanhar petiscos.</p>
+                        <button class="add-to-cart" data-name="Cerveja Loura" data-price="6.00">Adicionar - R$6,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-suco-limao.jpg" alt="Garrafa de refrigerante de limão, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Limonada Natural</h3>
+                        <p>Suco fresco de limão, perfeito para os dias quentes.</p>
+                        <button class="add-to-cart" data-name="Limonada Natural" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-pome.jpg" alt="Garrafa de refrigerante de pome, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Refrigerante de Pome</h3>
+                        <p>Sabor exótico e refrescante, diretamente da natureza.</p>
+                        <button class="add-to-cart" data-name="Refrigerante de Pome" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/refrigerante-limao-moca.jpg" alt="Garrafa de refrigerante limão com sabores variados, estilo fotografia de produtos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Refrigerante de Limão e Menta</h3>
+                        <p>Citrus e refrescante, ideal para dias ensolarados.</p>
+                        <button class="add-to-cart" data-name="Refrigerante de Limão e Menta" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="salgados" class="menu-section">
+                <h2>Salgados</h2>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/coxinha.jpg" alt="Coxinha dourada com recheio aparente, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Coxinha de Frango</h3>
+                        <p>Crocante por fora, macia por dentro, com recheio suculento de frango.</p>
+                        <button class="add-to-cart" data-name="Coxinha de Frango" data-price="3.50">Adicionar - R$3,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/pao-queijo.jpg" alt="Pães de queijo dourados em cesta de vime, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pão de Queijo</h3>
+                        <p>Tradicional quitute mineiro, quentinho e cheio de queijo.</p>
+                        <button class="add-to-cart" data-name="Pão de Queijo" data-price="2.50">Adicionar - R$2,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/empada.jpg" alt="Empada de frango com massa dourada, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Empada de Frango</h3>
+                        <p>Deliciosa empada com recheio cremoso de frango.</p>
+                        <button class="add-to-cart" data-name="Empada de Frango" data-price="4.00">Adicionar - R$4,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/esfiha.jpg" alt="Esfiha aberta de carne, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Esfiha de Carne</h3>
+                        <p>Tradicional esfiha aberta com recheio de carne temperada.</p>
+                        <button class="add-to-cart" data-name="Esfiha de Carne" data-price="3.50">Adicionar - R$3,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/pastel.jpg" alt="Pastel frito com recheio, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pastel de Carne</h3>
+                        <p>Delicioso pastel frito com recheio de carne e temperos.</p>
+                        <button class="add-to-cart" data-name="Pastel de Carne" data-price="3.00">Adicionar - R$3,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/coxinha-brocolis.jpg" alt="Coxinha de frango e brócolis, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Coxinha de Brócolis</h3>
+                        <p>Coxinha recheada com brócolis e queijo, uma opção vegetariana deliciosa.</p>
+                        <button class="add-to-cart" data-name="Coxinha de Brócolis" data-price="3.50">Adicionar - R$3,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/quibe.jpg" alt="Quibe assado, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Quibe Assado</h3>
+                        <p>Quibe crocante e recheio suculento de carne.</p>
+                        <button class="add-to-cart" data-name="Quibe Assado" data-price="4.00">Adicionar - R$4,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/bolo-milho.jpg" alt="Bolo de milho, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Bolo de Milho</h3>
+                        <p>Um clássico bolo de milho, macio e delicioso.</p>
+                        <button class="add-to-cart" data-name="Bolo de Milho" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/minipizza.jpg" alt="Mini pizza com cobertura, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Mini Pizza</h3>
+                        <p>Deliciosa mini pizza, perfeita para um lanche rápido.</p>
+                        <button class="add-to-cart" data-name="Mini Pizza" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/brocolis-recheado.jpg" alt="Brócolis recheado com queijo, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Brócolis Recheado</h3>
+                        <p>Brócolis recheado com queijo, uma opção saudável e saborosa.</p>
+                        <button class="add-to-cart" data-name="Brócolis Recheado" data-price="4.00">Adicionar - R$4,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/pastel-queijo.jpg" alt="Pastel de queijo, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pastel de Queijo</h3>
+                        <p>Pastel crocante de queijo, recheio que derrete na boca.</p>
+                        <button class="add-to-cart" data-name="Pastel de Queijo" data-price="3.50">Adicionar - R$3,50</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="doces" class="menu-section">
+                <h2>Doces</h2>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/pudim.jpg" alt="Fatia de pudim de leite com calda caramelizada, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pudim de Leite</h3>
+                        <p>Cremoso pudim de leite com calda de caramelo.</p>
+                        <button class="add-to-cart" data-name="Pudim de Leite" data-price="5.00">Adicionar - R$5,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/brigadeiro.jpg" alt="Brigadeiros caseiros com granulado de chocolate, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Brigadeiro</h3>
+                        <p>Delicioso docinho de chocolate, feito artesanalmente.</p>
+                        <button class="add-to-cart" data-name="Brigadeiro" data-price="2.00">Adicionar - R$2,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/bolo-cenoura.jpg" alt="Fatia de bolo de cenoura com cobertura de chocolate, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Bolo de Cenoura</h3>
+                        <p>Bolo macio de cenoura com cobertura de chocolate.</p>
+                        <button class="add-to-cart" data-name="Bolo de Cenoura" data-price="4.50">Adicionar - R$4,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/quindim.jpg" alt="Quindim dourado brilhante, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Quindim</h3>
+                        <p>Tradicional doce brasileiro à base de gema de ovo, coco e açúcar.</p>
+                        <button class="add-to-cart" data-name="Quindim" data-price="3.50">Adicionar - R$3,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/bolo-chocolate.jpg" alt="Fatia de bolo de chocolate, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Bolo de Chocolate</h3>
+                        <p>Cremoso e irresistível bolo de chocolate.</p>
+                        <button class="add-to-cart" data-name="Bolo de Chocolate" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/torta-limao.jpg" alt="Fatia de torta de limão, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Torta de Limão</h3>
+                        <p>Torta refrescante com recheio de limão e merengue.</p>
+                        <button class="add-to-cart" data-name="Torta de Limão" data-price="6.00">Adicionar - R$6,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/delicia-de-abobora.jpg" alt="Delícia de abóbora, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Delícia de Abóbora</h3>
+                        <p>Doce caseiro de abóbora, uma tradição nas festas.</p>
+                        <button class="add-to-cart" data-name="Delícia de Abóbora" data-price="4.00">Adicionar - R$4,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/pave.jpg" alt="Pavê de chocolate, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pavê de Chocolate</h3>
+                        <p>Cremoso pavê de chocolate, uma deliciosa sobremesa.</p>
+                        <button class="add-to-cart" data-name="Pavê de Chocolate" data-price="5.50">Adicionar - R$5,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/gateau.jpg" alt="Fatia de gateau, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Gateau de Chocolate</h3>
+                        <p>Delicioso gateau com coração de chocolate derretido.</p>
+                        <button class="add-to-cart" data-name="Gateau de Chocolate" data-price="6.50">Adicionar - R$6,50</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/trufa.jpg" alt="Trufas de chocolate, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Trufas de Chocolate</h3>
+                        <p>Bombons de chocolate recheados, amor em cada pedaço.</p>
+                        <button class="add-to-cart" data-name="Trufas de Chocolate" data-price="3.00">Adicionar - R$3,00</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://padaria-delicia.com/images/biscoito.jpg" alt="Biscoitos de queijo, estilo fotografia de alimentos" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Biscoitos de Queijo</h3>
+                        <p>Deliciosos biscoitos crocantes recheados de queijo.</p>
+                        <button class="add-to-cart" data-name="Biscoitos de Queijo" data-price="2.50">Adicionar - R$2,50</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+        <div id="message-box" class="message-box">
+            <p id="message-text"></p>
+        </div>
+    
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Seu Carrinho</h2>
+                <div id="cart-items"></div>
+                <div id="cart-total"></div>
+                <div id="payment-methods">
+                    <h3>Forma de Pagamento</h3>
+                    <select id="payment-select">
+                        <option value="credit">Cartão de Crédito</option>
+                        <option value="debit">Cartão de Débito</option>
+                        <option value="pix">PIX</option>
+                    </select>
+                </div>
+                <button id="pay-button">Pagar</button>
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 Fornada Divina. Todos os direitos reservados.</p>
+        </footer>
+    
+        
+           <script src="script.js"></script>
+        
+    </body>
+    </html>

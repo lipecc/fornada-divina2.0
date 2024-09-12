@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Padaria Fornada Divina</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f5e6d3;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .chat-container {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        width: 350px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    .chat-header {
+        background-color: #8b4513;
+        color: white;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        text-align: center;
+    }
+    .chat-messages {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    .message {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 15px;
+        max-width: 80%;
+    }
+    .user-message {
+        background-color: #ffa500;
+        color: white;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    .bot-message {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .chat-input {
+        display: flex;
+        padding: 20px;
+    }
+    #user-input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+    #send-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #send-button:hover {
+        background-color: #45a049;
+    }
+    .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #8b4513;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .back-button:hover {
+        background-color: #704214;
+    }
+</style>
+</head>
+<body>
+    <a href="index.html" class="back-button">Voltar</a>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Contato Fornada Divina</h2>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">Olá! Bem-vindo ao atendimento da Padaria Fornada Divina. Como posso ajudar você hoje?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        const productCategories = {
+            refrigerantes: [
+                { nome: "Coca-Cola", preco: 5.50 },
+                { nome: "Guaraná Antarctica", preco: 5.00 },
+                { nome: "Fanta Laranja", preco: 5.00 },
+                { nome: "Sprite", preco: 5.00 }
+            ],
+            doces: [
+                { nome: "Brigadeiro", preco: 3.50 },
+                { nome: "Pudim", preco: 7.00 },
+                { nome: "Torta de Limão", preco: 8.50 },
+                { nome: "Bomba de Chocolate", preco: 6.00 }
+            ],
+            sucos: [
+                { nome: "Suco de Laranja", preco: 6.50 },
+                { nome: "Suco de Uva", preco: 6.50 },
+                { nome: "Suco de Maracujá", preco: 7.00 },
+                { nome: "Suco Verde", preco: 8.00 }
+            ],
+            salgados: [
+                { nome: "Coxinha", preco: 4.50 },
+                { nome: "Esfiha", preco: 4.00 },
+                { nome: "Pão de Queijo", preco: 3.50 },
+                { nome: "Croissant", preco: 5.50 }
+            ]
+        };
+
+        const botResponses = [
+            {
+                keywords: ['horário', 'horas', 'aberto', 'funcionamento'],
+                response: 'Estamos abertos de segunda a sábado, das 6h às 20h.'
+            },
+            {
+                keywords: ['pão', 'pães', 'francês', 'integral'],
+                response: 'Temos uma grande variedade de pães frescos todos os dias! Nossa especialidade é o pão de fermentação natural. Alguns dos nossos pães mais populares são: francês, integral, australiano, e ciabatta.'
+            },
+            {
+                keywords: ['entrega', 'delivery', 'entregar'],
+                response: 'Sim, fazemos entregas! O pedido mínimo é de R$ 20,00. A taxa de entrega varia conforme a região. Para mais detalhes, por favor, informe seu endereço.'
+            },
+            {
+                keywords: ['bolo', 'bolos', 'torta'],
+                response: 'Nossos bolos são feitos diariamente. Temos sabores tradicionais como chocolate, cenoura e fubá, e especiais como red velvet e pistache. Que tal experimentar nosso novo bolo de cenoura com cobertura de chocolate?'
+            },
+            {
+                keywords: ['promoção', 'desconto', 'oferta'],
+                response: 'Temos promoções diárias! Hoje, na compra de 3 pães, você leva 1 grátis! Além disso, após as 18h, todos os produtos do dia têm 20% de desconto.'
+            },
+            {
+                keywords: ['contato', 'telefone', 'email', 'e-mail'],
+                response: 'Você pode nos contatar pelo telefone (11) 1234-5678 ou pelo e-mail contato@fornadivina.com. Estamos disponíveis para atendimento de segunda a sábado, das 6h às 20h.'
+            },
+            {
+                keywords: ['endereço', 'localização', 'onde', 'fica'],
+                response: 'Estamos localizados na Rua dos Sabores, 123 - Bairro Delícia. Temos fácil acesso e estacionamento próprio para clientes.'
+            },
+            {
+                keywords: ['cardápio', 'menu', 'produtos'],
+                response: 'Nosso cardápio completo está disponível em nosso site. Você pode acessá-lo clicando no botão "Cardápio" na página inicial. Lá você encontrará todos os nossos pães, bolos, doces e produtos especiais.'
+            },
+            {
+                keywords: ['pagamento', 'pagar', 'dinheiro', 'cartão', 'pix'],
+                response: 'Aceitamos diversas formas de pagamento para sua comodidade: dinheiro, cartões de crédito e débito (Visa, Mastercard, Elo), e também pagamentos via Pix.'
+            },
+        ];
+
+        function addMessage(content, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+            messageDiv.textContent = content;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function formatProductList(products) {
+            return products.map(product => `${product.nome}: R$ ${product.preco.toFixed(2)}`).join('\n');
+        }
+
+        function levenshteinDistance(a, b) {
+            const matrix = [];
+
+            for (let i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+
+            for (let j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) == a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i - 1][j - 1] + 1,
+                            matrix[i][j - 1] + 1,
+                            matrix[i - 1][j] + 1
+                        );
+                    }
+                }
+            }
+
+            return matrix[b.length][a.length];
+        }
+
+        function findClosestMatch(word, dictionary, threshold = 0.7) {
+            let closestMatch = null;
+            let smallestDistance = Infinity;
+
+            for (const dictWord of dictionary) {
+                const distance = levenshteinDistance(word, dictWord);
+                const maxLength = Math.max(word.length, dictWord.length);
+                const similarity = 1 - distance / maxLength;
+
+                if (similarity > threshold && distance < smallestDistance) {
+                    smallestDistance = distance;
+                    closestMatch = dictWord;
+                }
+            }
+
+            return closestMatch;
+        }
+
+        function botReply(userMessage) {
+            setTimeout(() => {
+                const lowercaseMessage = userMessage.toLowerCase();
+                const words = lowercaseMessage.split(/\s+/);
+                
+                // Check for greetings
+                const greetings = ['oi', 'olá', 'ola', 'hello', 'ei', 'opa', 'e aí', 'eai', 'bom dia', 'boa tarde', 'boa noite'];
+                if (words.some(word => greetings.includes(word))) {
+                    const response = `Olá! Seja bem-vindo à Padaria Fornada Divina! Temos uma variedade incrível de produtos fresquinhos para você. Nosso cardápio inclui pães artesanais, bolos deliciosos, salgados irresistíveis, doces tentadores, além de bebidas refrescantes como sucos naturais e refrigerantes. Você tem alguma dúvida sobre nossos produtos ou gostaria de uma recomendação especial?`;
+                    addMessage(response);
+                    return;
+                }
+
+                // Check for product category queries
+                const allCategories = Object.keys(productCategories);
+                for (const word of words) {
+                    const closestCategory = findClosestMatch(word, allCategories);
+                    if (closestCategory) {
+                        const products = productCategories[closestCategory];
+                        const response = `Aqui está nossa lista de ${closestCategory}:\n\n${formatProductList(products)}`;
+                        addMessage(response);
+                        return;
+                    }
+                }
+
+                // Check for general queries
+                let bestMatch = null;
+                let maxMatchCount = 0;
+
+                for (const response of botResponses) {
+                    let matchCount = 0;
+                    for (const word of words) {
+                        const closestKeyword = findClosestMatch(word, response.keywords);
+                        if (closestKeyword) {
+                            matchCount++;
+                        }
+                    }
+                    if (matchCount > maxMatchCount) {
+                        maxMatchCount = matchCount;
+                        bestMatch = response;
+                    }
+                }
+
+                if (bestMatch) {
+                    addMessage(bestMatch.response);
+                } else {
+                    addMessage("Desculpe, não entendi sua pergunta. Pode reformular ou perguntar sobre nossos horários, pães, entregas, doces, bolos, promoções, contato, endereço, cardápio ou formas de pagamento? Você também pode perguntar sobre nossos refrigerantes, doces, sucos ou salgados.");
+                }
+            }, 1000);
+        }
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                userInput.value = '';
+                botReply(message);
+            }
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
