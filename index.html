@@ -6,78 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padaria Fornada Divina</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #613b1f;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #ffffff;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 600px;
-        }
-        h1 {
-            color: #8b4513;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px;
-        }
-        .btn-menu {
-            background-color: #ffa500;
-            color: white;
-        }
-        .btn-contact {
-            background-color: #4caf50;
-            color: white;
-        }
-        .btn:hover {
-            transform: scale(1.05);
-        }
-        .btn-menu:hover {
-            background-color: #ff8c00;
-        }
-        .btn-contact:hover {
-            background-color: #45a049;
-        }
-        .bread-icon {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 20px;
-        }
+       body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/logo fornada mior.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobrir toda a tela */
+    background-position: center; /* Centralizar a imagem */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+}
+
+h2 {
+    color: #8b4513;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn-menu {
+    background-color: #ffa500;
+    color: white;
+}
+
+.btn-contact {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-menu:hover {
+    background-color: #ff8c00;
+}
+
+.btn-contact:hover {
+    background-color: #45a049;
+}
+
+.bread-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
     </style>
     </head>
     <body>
         <div class="container">
+            <h2>Padaria Fornada Divina</h2>
             <svg class="bread-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20,80 Q50,60 80,80 T80,30 Q50,10 20,30 T20,80 Z" fill="#f4a460"/>
                 <circle cx="40" cy="40" r="5" fill="#8b4513"/>
                 <circle cx="60" cy="40" r="5" fill="#8b4513"/>
                 <path d="M45,60 Q50,65 55,60" stroke="#8b4513" stroke-width="2" fill="none"/>
             </svg>
-            <h1>Bem-vindo à Padaria Fornada Divina</h1>
+            <h2>Bem-vindo(a)<br>estou aqui para te ajudar</h2>
             <p>Delicie-se com o aroma celestial dos nossos pães frescos e quitutes divinos. Na Fornada Divina, cada mordida é uma experiência sagrada de sabor e tradição.</p>
             <div>
                 <a href="cardapio.html" class="btn btn-menu">Ver Cardápio</a>
