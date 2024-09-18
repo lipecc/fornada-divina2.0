@@ -279,7 +279,7 @@ footer {
 .back-button {
     position: absolute;
     top: 45px;
-    right: 0px;
+    right: 30px;
     background-color: #ce671d;
     color: white;
     border: none;

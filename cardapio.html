@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Fornada Divina - Sabor em Cada Mordida</title>
+    <title>Fornada Divina</title>
      <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo fornada mior.jpg" type="image/x-icon">
     </head>
     <body>
         <header>
@@ -14,12 +15,13 @@
             <div id="cart-icon">
                 🛒
                 <span id="cart-count">0</span>
-                <a href="index.html" class="back-button">Voltar</a>
+                <a href="index.html" class="back-button">↩</a>
             </div>
         </header>
     
         <nav>
             <ul>
+                <li><a href="#pães">Pães</a></li>
                 <li><a href="#sucos">Sucos</a></li>
                 <li><a href="#refrigerantes">Refrigerantes</a></li>
                 <li><a href="#salgados">Salgados</a></li>
@@ -28,6 +30,73 @@
         </nav>
     
         <div class="container">
+            <section id="pães" class="menu-section">
+                <h2>Pães</h2>
+                <div class="menu-item">
+                    <img src="images/pão-frances.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pão Frances</h3>
+                        <p>O pão de cada dia.</p>
+                        <button class="add-to-cart" data-name="Pão Frances" data-price="2.50Kg">Adicionar - R$2.50Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/croissant.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Croissant</h3>
+                        <p>Feito com a mesma receita da França.</p>
+                        <button class="add-to-cart" data-name="croissant" data-price="7.00Kg">Adicionar - R$7,00Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/pão-australiano.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pão Australiano</h3>
+                        <p>Este pão é conhecido por sua cor escura, textura macia e sabor levemente adocicado.</p>
+                        <button class="add-to-cart" data-name="Pão Australiano" data-price="6.50Kg">Adicionar - R$6,50Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/pão-caseiro.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pão Caseiro</h3>
+                        <p>Um pão feito diretamente da padaria com nosso propria receita.</p>
+                        <button class="add-to-cart" data-name="Pão Caseiro" data-price="3.25Kg">Adicionar - R$3.25Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/pão-de-forma.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pão de Forma</h3>
+                        <p>ideal para fazer sanduíches e torradas.</p>
+                        <button class="add-to-cart" data-name="Pão de Forma" data-price="3.50Kg">Adicionar - R$3,50Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/pão-integral.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Pão Integral</h3>
+                        <p>O pão integral é uma opção saudável e nutritiva que tem ganhado cada vez mais espaço na dieta de muitas pessoas.</p>
+                        <button class="add-to-cart" data-name="Pão Integral" data-price="6.00Kg">Adicionar - R$6,00Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/bisnaga.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Bisnaga</h3>
+                        <p>É um tipo de pão pequeno e macio, muito popular no Brasil, especialmente entre as crianças. As bisnaguinhas são frequentemente consumidas no café da manhã ou no lanche da tarde.</p>
+                        <button class="add-to-cart" data-name="Bisnaga" data-price="2.00Kg">Adicionar - R$2,00Kg</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/baguete.jpg" alt="" width="250" height="200">
+                    <div class="menu-item-details">
+                        <h3>Baguete</h3>
+                        <p>A baguete é um pão tradicional francês, conhecido por sua forma alongada e casca crocante</p>
+                        <button class="add-to-cart" data-name="Baguete" data-price="5.00Kg">Adicionar - R$5,00Kg</button>
+                    </div>
+                </div>
+            </section>
             <section id="sucos" class="menu-section">
                 <h2>Sucos</h2>
                 <div class="menu-item">
@@ -215,11 +284,11 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="images/pastel-frango.jpg" alt="Coxinha de frango e brócolis, estilo fotografia de alimentos" width="250" height="200">
+                    <img src="images/pastel-frango.jpg" alt="pastel de frango" width="250" height="200">
                     <div class="menu-item-details">
                         <h3>Pastel de Frango</h3>
                         <p>Delicioso pastel frito com recheio de frango e temperos.</p>
-                        <button class="add-to-cart" data-name="Coxinha de Brócolis" data-price="3.50">Adicionar - R$3,50</button>
+                        <button class="add-to-cart" data-name="Pastel de Frango" data-price="6.50">Adicionar - R$6,50</button>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -356,7 +425,6 @@
         </div>
     
         <footer>
-            <p>&copy; 2024 Fornada Divina. Todos os direitos reservados.</p>
         </footer>
     
         
