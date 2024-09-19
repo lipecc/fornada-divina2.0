@@ -1,0 +1,33 @@
+/* Delivery Page Specific Styles */
+#carrinho {
+    padding: 20px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+#cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#payment-methods {
+    margin-top: 20px;
+}
+
+#pay-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#pay-button:hover {
+    background-color: #45a049;
+}

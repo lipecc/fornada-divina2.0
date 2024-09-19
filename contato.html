@@ -115,35 +115,69 @@
 
         const categoriasProdutos = {
             pães: [
-                { nome: "Pão Francês", preco: 2.50 },
-                { nome: "Croissant", preco: 7.00 },
-                { nome: "Pão Australiano", preco: 6.50 }
+                { nome: "Pão Francês Kg", preco: 2.50 },
+                { nome: "Croissant Kg", preco: 7.00 },
+                { nome: "Pão Australiano Kg", preco: 6.50 },
+                { nome: "Pão Caseiro Kg", preco: 6.50 },
+                { nome: "Pão de Forma Kg", preco: 3.50 },
+                { nome: "Pão Integral Kg", preco: 6.00 },
+                { nome: "Bisnaga Kg", preco: 2.00 },
+                { nome: "Baguete Kg", preco: 5.00 },
             ],
             refrigerantes: [
-                { nome: "Coca-Cola", preco: 5.50 },
-                { nome: "Guaraná Antarctica", preco: 5.00 },
-                { nome: "Sprite", preco: 5.00 }
+                { nome: "Coca-Cola", preco: 4.50 },
+                { nome: "Guaraná Antarctica", preco: 4.50 },
+                { nome: "Refrigerante de Laranja", preco: 4.50 },
+                { nome: "Sprite", preco: 4.50 },
+                { nome: "Refrigerante de Limão e Menta", preco: 5.00 },
             ],
             doces: [
-                { nome: "Brigadeiro", preco: 3.50 },
-                { nome: "Pudim", preco: 7.00 },
-                { nome: "Torta de Limão", preco: 8.50 }
+                { nome: "Pudim de Leite", preco: 5.00 },
+                { nome: "Brigadeiro", preco: 2.00 },
+                { nome: "Bolo de Cenoura", preco: 4.50 },
+                { nome: "Quindim", preco: 3.50 },
+                { nome: "Bolo de Chocolate", preco: 5.50 },
+                { nome: "Torta de Limão", preco: 6.00 },
+                { nome: "Delicia de Abóbora", preco: 4.00 },
+                { nome: "Pavê  de Chocolate", preco: 5.50 },
+                { nome: "Gateau de Chocolate", preco: 6.50 },
+                { nome: "Trufas de Chocolate", preco: 3.00 },
             ],
             sucos: [
-                { nome: "Suco de Laranja", preco: 6.50 },
-                { nome: "Suco de Uva", preco: 6.50 },
-                { nome: "Suco de Maracujá", preco: 7.00 }
+                { nome: "Suco de Laranja", preco: 5.00 },
+                { nome: "Suco de Abacaxi com Hortelã", preco: 6.00 },
+                { nome: "Suco de Acerola", preco: 5.50 },
+                { nome: "Suco de Maracujá", preco: 6.00 },
+                { nome: "Suco de Melancia", preco: 5.50 },
+                { nome: "Suco de Morango", preco: 6.00 },
+                { nome: "Suco de Acerola", preco: 5.50 },
+                { nome: "Limonada com Hortelã", preco: 5.00 },
+                { nome: "Suco de Manga", preco: 5.50 },
+                { nome: "Suco de Uva Integral", preco: 6.50 },
+                { nome: "Suco de Caju", preco: 6.00 },
+                { nome: "Suco de Pitanga", preco: 5.50 },
+                { nome: "Suco de Groselha", preco: 5.00 },
             ],
             salgados: [
-                { nome: "Coxinha", preco: 4.50 },
-                { nome: "Esfiha", preco: 4.00 },
-                { nome: "Pão de Queijo", preco: 3.50 }
+                { nome: "Coxinha de Frango", preco: 3.50 },
+                { nome: "Pão de Queijo", preco: 2.50 },
+                { nome: "Empada de Frango", preco: 4.00 },
+                { nome: "Esfiha de Carne", preco: 3.50 },
+                { nome: "Pastel de Carne", preco: 3.00 },
+                { nome: "Pastel de Frango", preco: 6.50 },
+                { nome: "Quibe Assado", preco: 4.00 },
+                { nome: "Mini Pizza", preco: 5.00 },
+                { nome: "Pastel de Queijo", preco: 3.50 },
             ]
         };
 
         const respostasComuns = [
             {
-                keywords: ['horário', 'horario','funcionamento'],
+                keywords: ['refrigerante', 'refri'],
+                resposta: 'Temos muitos Refrigerantes disponíveis. Você gostaria de ver a lista completa? Use o termo refrigerantes.'
+            },
+            {
+                keywords: ['horário', 'horario', 'funcionamento'],
                 resposta: 'Estamos abertos de segunda a sábado, das 6h às 20h.'
             },
             {
@@ -155,18 +189,18 @@
                 resposta: 'Fazemos entregas! O pedido mínimo é R$ 20,00. Informe seu endereço para calcular a taxa.'
             },
             {
-                keywords: ['promoção','promocao','promoçao'],
+                keywords: ['promoção', 'promocao', 'promoçao'],
                 resposta: 'Promoção de hoje: na compra de 3 pães, você leva 1 grátis! E após as 18h, todos os produtos têm 20% de desconto.'
             }
         ];
 
-        const saudações = ['oi', 'ola','olá', 'e ai','bom dia', 'boa tarde', 'boa noite', 'e aí', 'opa'];
+        const saudações = ['oi', 'ola', 'olá', 'e ai', 'bom dia', 'boa tarde', 'boa noite', 'e aí', 'opa'];
 
         function adicionarMensagem(conteudo, isUser = false) {
             const messageDiv = document.createElement('div');
             messageDiv.classList.add('message');
             messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
-            messageDiv.textContent = conteudo;
+            messageDiv.innerHTML = conteudo; // Alterado para innerHTML para suportar <br>
             chatMessages.appendChild(messageDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
@@ -190,9 +224,9 @@
 
         function mostrarProdutos(categoria) {
             const produtos = categoriasProdutos[categoria];
-            let resposta = `Aqui estão nossos ${categoria}:\n`;
+            let resposta = `Aqui estão nossos ${categoria}:<br>`;
             produtos.forEach(produto => {
-                resposta += `${produto.nome}: R$ ${produto.preco.toFixed(2)}\n`;
+                resposta += `${produto.nome}: R$ ${produto.preco.toFixed(2)}<br>`;
             });
             return resposta;
         }
@@ -200,7 +234,7 @@
         function processarMensagemUsuario(mensagem) {
             const categorias = Object.keys(categoriasProdutos);
             for (const categoria of categorias) {
-                if (mensagem.includes(categoria)) {
+                if (mensagem.toLowerCase().includes(categoria)) {
                     return mostrarProdutos(categoria);
                 }
             }

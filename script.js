@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const cartCount = document.getElementById('cart-count');
     const cartIcon = document.getElementById('cart-icon');
     const modal = document.getElementById('cart-modal');
@@ -6,7 +6,17 @@
     const cartItemsContainer = document.getElementById('cart-items');
     const cartTotalElement = document.getElementById('cart-total');
     const payButton = document.getElementById('pay-button');
-    let cart = [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function loadCart() {
+        cart = JSON.parse(localStorage.getItem('cart')) || [];
+        updateCartCount();
+        updateCartModal();
+    }
 
     // Updated navigation link handling
     document.querySelector('nav').addEventListener('click', function(e) {
@@ -29,6 +39,7 @@
             const name = this.getAttribute('data-name');
             const price = parseFloat(this.getAttribute('data-price'));
             cart.push({name, price});
+            saveCart();
             updateCartCount();
             showMessage(`${name} adicionado ao carrinho!`);
         });
@@ -39,9 +50,6 @@
         const messageText = document.getElementById('message-text');
         messageText.textContent = message;
         messageBox.style.display = 'block';
-        messageBox.style.zIndex = '1001';  
-        messageBox.style.maxWidth = '90%';  
-        messageBox.style.width = 'auto';
         setTimeout(() => {
             messageBox.style.display = 'none';
         }, 3000);
@@ -69,6 +77,7 @@
 
     function removeFromCart(index) {
         cart.splice(index, 1);
+        saveCart();
         updateCartCount();
         updateCartModal();
     }
@@ -92,7 +101,11 @@
         const paymentMethod = document.getElementById('payment-select').value;
         showMessage(`Pagamento de R$${cartTotalElement.textContent.split('R$')[1]} processado via ${paymentMethod}. Obrigado pela sua compra!`);
         cart = [];
+        saveCart();
         updateCartCount();
         modal.style.display = "none";
     });
+
+    // Load cart on page load
+    loadCart();
 });

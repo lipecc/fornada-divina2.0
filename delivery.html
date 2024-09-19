@@ -1,34 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Fornada Divina</title>
-     <link rel="stylesheet" href="styles3.css">
+    <title>Fornada Divina - Delivery</title>
+    <link rel="stylesheet" href="styles3.css">
     <link rel="icon" href="images/logo fornada mior.jpg" type="image/x-icon">
-    </head>
-    <body>
-        <header>
-            <h1>Fornada Divina</h1>
-            <p>Sabor em Cada Mordida</p>
-                <a href="index.html" class="back-button">↩</a>
-            </div>
-        </header>
+</head>
+<body>
+    <header>
+        <h1>Fornada Divina</h1>
+        <p>Sabor em Cada Mordida</p>
+        <a href="index.html" class="back-button">↩</a>
+    </header>
 
-        <nav>
+    <nav>
+        <ul>
+            <li><a href="#carrinho">Delivery</a></li>
+        </ul>
+    </nav>
     
-            <ul>
-                <li><h1 href="#fassa seu pedido">Faça Seu Pedido</h1></li>
-            </ul>
-        </nav>
+    <div id="message-box" class="message-box">
+        <p id="message-text"></p>
+    </div>
+    <div class="container">
+        <section id="carrinho">
+            <h2>Seu Carrinho-Delivery</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div id="payment-methods">
+                <h3>Forma de Pagamento</h3>
+                <select id="payment-select">
+                    <option value="credito">Cartão de Crédito</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="pix">Pix</option>
+                </select>
+            </div>
+            <button id="pay-button">Pagar</button>
+        </section>
+         <section id="contato">
+        <h2>um email vai chegar pedido pronto </h2>
+        <p>Endereço: Rua das Flores, 123, Centro</p>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Email: fornadadivina@gmail.com.br</p>
+    </div>
+    </section>
+    </div>
+    <div>
+   
+    <footer>
+    </footer>
 
-       
-        <footer>
-        </footer>
-
-
-           <script src="script.js"></script>
-
-    </body>
-    </html>
+    <script src="delivery.js"></script>
+</body>
+</html>

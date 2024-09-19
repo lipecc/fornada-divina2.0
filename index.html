@@ -1,128 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padaria Fornada Divina</title>
     <link rel="icon" href="images/logo fornada mior.jpg" type="image/x-icon">
     <style>
        body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('images/logo fornada mior.jpg'); /* Imagem de fundo */
-    background-size: cover; /* Cobrir toda a tela */
-    background-position: center; /* Centralizar a imagem */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+           font-family: 'Arial', sans-serif;
+           background-image: url('images/logo fornada mior.jpg');
+           background-size: cover;
+           background-position: center;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+       }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px;
-}
+       .container {
+           background-color: rgba(255, 255, 255, 0.8);
+           border-radius: 20px;
+           padding: 40px;
+           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+           text-align: center;
+           max-width: 600px;
+       }
 
-h2 {
-    color: #8b4513;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+       h2 {
+           color: #8b4513;
+           font-size: 2em;
+           margin-bottom: 20px;
+       }
 
-p {
-    color: #000000;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
+       .btn {
+           padding: 12px 24px;
+           border: none;
+           border-radius: 30px;
+           font-size: 1.2em;
+           cursor: pointer;
+           transition: all 0.3s ease;
+           text-decoration: none;
+           display: inline-block;
+           margin: 10px;
+       }
 
-.btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px;
-}
+       .btn-menu {
+           background-color: #ffa500;
+           color: white;
+       }
 
-.btn-menu {
-    background-color: #ffa500;
-    color: white;
-}
+       .btn-contact {
+           background-color: #4caf50;
+           color: white;
+       }
 
-.btn-contact {
-    background-color: #4caf50;
-    color: white;
-}
+       .btn:hover {
+           transform: scale(1.05);
+       }
 
-.btn:hover {
-    transform: scale(1.05);
-}
+       .btn-menu:hover {
+           background-color: #ff8c00;
+       }
 
-.btn-menu:hover {
-    background-color: #ff8c00;
-}
+       .btn-contact:hover {
+           background-color: #45a049;
+       }
 
-.btn-contact:hover {
-    background-color: #45a049;
-}
+       .bread-icon {
+           width: 100px;
+           height: 100px;
+           margin-bottom: 10px;
+       }
 
-.bread-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
+       .hidden {
+           display: none;
+       }
+
+       #userIcon {
+           position: absolute;
+           top: 10px;
+           left: 10px;
+           cursor: pointer;
+       }
 
     </style>
-    </head>
-    <body>
-        <div class="container">
-            <h2>Padaria Fornada Divina</h2>
-            <svg class="bread-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20,80 Q50,60 80,80 T80,30 Q50,10 20,30 T20,80 Z" fill="#f4a460"/>
-                <circle cx="40" cy="40" r="5" fill="#8b4513"/>
-                <circle cx="60" cy="40" r="5" fill="#8b4513"/>
-                <path d="M45,60 Q50,65 55,60" stroke="#8b4513" stroke-width="2" fill="none"/>
-            </svg>
-            <h2>Bem-vindo(a)<br>estou aqui para te ajudar</h2>
-            <p>Delicie-se com o aroma celestial dos nossos pães frescos e quitutes divinos. Na Fornada Divina, cada mordida é uma experiência sagrada de sabor e tradição.</p>
-            <div>
-                <a href="criar-conta.html" class="btn btn-menu">Criar Conta</a>
-                <a href="login.html" class="btn btn-contact">Login</a>
-            </br>
-                <a href="delivery.html" class="btn btn-menu">Delivery</a>
-                <a href="sobre.html" class="btn btn-menu">Sobre</a>
-                <a href="cardapio.html" class="btn btn-menu">Cardápio</a>
-                <a href="contato.html" class="btn btn-contact">Contato</a>
-            </div>
+</head>
+<body>
+    <img id="userIcon" src="images/user-icon.png" alt="User Icon" class="hidden" width="50" height="50">
+    <div class="container">
+        <h2>Padaria Fornada Divina</h2>
+        <svg class="bread-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,80 Q50,60 80,80 T80,30 Q50,10 20,30 T20,80 Z" fill="#f4a460"/>
+            <circle cx="40" cy="40" r="5" fill="#8b4513"/>
+            <circle cx="60" cy="40" r="5" fill="#8b4513"/>
+            <path d="M45,60 Q50,65 55,60" stroke="#8b4513" stroke-width="2" fill="none"/>
+        </svg>
+        <h2>Bem-vindo(a)<br>estou aqui para te ajudar</h2>
+        <p>Delicie-se com o aroma celestial dos nossos pães frescos e quitutes divinos. Na Fornada Divina, cada mordida é uma experiência sagrada de sabor e tradição.</p>
+        <div>
+            <a href="criar-conta.html" class="btn btn-menu" id="createAccountBtn">Criar Conta</a>
+            <a href="login.html" class="btn btn-contact" id="loginBtn">Login</a>
+            <a href="#" class="btn btn-menu hidden" id="deleteAccountBtn">Deletar Conta</a>
+            <a href="#" class="btn btn-contact hidden" id="logoutBtn">Sair da Conta</a>
+        </br>
+            <a href="delivery.html" class="btn btn-menu">Delivery</a>
+            <a href="sobre.html" class="btn btn-menu">Sobre</a>
+            <a href="cardapio.html" class="btn btn-menu">Cardápio</a>
+            <a href="contato.html" class="btn btn-contact">Contato</a>
         </div>
-    
-        <script>
-            document.querySelectorAll('.btn').forEach(btn => {
-                btn.addEventListener('mouseover', function() {
-                    this.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.3)';
-                });
-    
-                btn.addEventListener('mouseout', function() {
-                    this.style.boxShadow = 'none';
-                });
+    </div>
+
+    <script>
+        // Verifica se o usuário está logado
+        function checkLogin() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                // Esconde os botões de criar conta e login
+                document.getElementById('createAccountBtn').classList.add('hidden');
+                document.getElementById('loginBtn').classList.add('hidden');
+
+                // Mostra os botões de deletar conta e sair
+                document.getElementById('deleteAccountBtn').classList.remove('hidden');
+                document.getElementById('logoutBtn').classList.remove('hidden');
+
+                // Mostra o ícone de usuário no canto superior esquerdo
+                document.getElementById('userIcon').classList.remove('hidden');
+            }
+        }
+
+        // Função de sair da conta
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser'); // Remove o estado de login
+            alert('Você saiu da conta.');
+            location.reload(); // Recarrega a página
+        });
+
+        // Função de deletar conta
+        document.getElementById('deleteAccountBtn').addEventListener('click', function() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                localStorage.removeItem(loggedInUser); // Remove a conta do localStorage
+                localStorage.removeItem('loggedInUser'); // Remove o estado de login
+                alert('Conta deletada com sucesso.');
+                location.reload(); // Recarrega a página
+            }
+        });
+
+        // Executa a verificação de login ao carregar a página
+        checkLogin();
+
+        // Efeito de hover para os botões
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseover', function() {
+                this.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.3)';
             });
-    
-            document.querySelector('.bread-icon').addEventListener('click', function() {
-                this.style.transform = 'rotate(360deg)';
-                this.style.transition = 'transform 1s ease';
-                setTimeout(() => {
-                    this.style.transform = 'rotate(0deg)';
-                }, 1000);
+
+            btn.addEventListener('mouseout', function() {
+                this.style.boxShadow = 'none';
             });
-        </script>
-    </body>
-    </html>
+        });
+
+        // Animação do ícone de pão
+        document.querySelector('.bread-icon').addEventListener('click', function() {
+            this.style.transform = 'rotate(360deg)';
+            this.style.transition = 'transform 1s ease';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0deg)';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

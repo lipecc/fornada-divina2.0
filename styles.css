@@ -1,3 +1,4 @@
+
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -278,8 +279,8 @@ footer {
 }
 .back-button {
     position: absolute;
-    top: 45px;
-    right: 30px;
+    top: 65px;
+    right: 65px;
     background-color: #ce671d;
     color: white;
     border: none;
@@ -290,4 +291,36 @@ footer {
 }
 .back-button:hover {
     background-color: #5e350c;
+}
+/* Botão Delivery */
+.delivery-button {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.delivery-button:hover {
+    background-color: #45a049;
+}
+
+/* Outros estilos do botão de pagamento e modal */
+#pay-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+#pay-button:hover {
+    background-color: #45a049;
 }
