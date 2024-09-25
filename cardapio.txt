@@ -1,0 +1,11 @@
+<button id="pay-button">Pagar</button>
+
+
+<select id="payment-select">
+    <option value="credito">Cartão de Crédito</option>
+    <option value="debito">Cartão de Débito</option>
+    <option value="pix">PIX</option>
+</select>
+
+
+<h3>Forma de Pagamento</h3>
