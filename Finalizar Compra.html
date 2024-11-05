@@ -6,6 +6,16 @@
     <title>Fornada Divina - Finalizar Compra</title>
     <link rel="stylesheet" href="styles3.css">
     <link rel="icon" href="images/logo fornada mior.jpg" type="image/x-icon">
+    <style>
+        /* Estilo para esconder o QR Code inicialmente */
+        #qr-code {
+            display: none;
+        }
+        /* Estilo para exibir o QR Code quando a opção Pix for selecionada */
+        #payment-select:has(option[value="pix"]:checked) + #qr-code {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,27 +40,24 @@
             <div id="cart-total"></div>
             <div id="payment-methods">
                 <h3>Forma de Pagamento</h3>
-                <select id="payment-select">
+                <select id="payment-select" onchange="document.getElementById('qr-code').style.display = this.value === 'pix' ? 'block' : 'none'">
                     <option value="credito">Cartão de Crédito</option>
                     <option value="debito">Cartão de Débito</option>
                     <option value="pix">Pix</option>
                 </select>
             </div>
-            <button id="pay-button">Finalizar Compra</button>
-            <center></center>
-             <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://lipecc.github.io/fornada-divina2.0/picpay.html" alt="QR Code">
-            </center>
+            <button id="pay-button" onclick="window.location.href='card.html';">Finalizar Compra</button>
+
+            <div id="qr-code" style="text-align: center; margin-top: 20px;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://lipecc.github.io/fornada-divina2.0/picpay.html" alt="QR Code">
+            </div>
         </section>
-         <section id="contato">
-        <h2>Ao pagar seu pedido vai ser enviado para cozinha</h2>
-             <h2>Qr code foi gerado baseado em seu pedido</h2>
+        <section id="contato">
+            <h2>Ao pagar seu pedido vai ser enviado para cozinha</h2>
+            <h2>QR code foi gerado baseado em seu pedido</h2>
+        </section>
     </div>
-    </section>
-    </div>
-    <div>
-
-    <footer>    </footer>
-
     <script src="Finalizar Compra.js"></script>
+    <footer></footer>
 </body>
 </html>
