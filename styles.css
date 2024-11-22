@@ -1,3 +1,55 @@
+/* Estilo para os itens do carrinho */
+#cart-items div {
+  margin-bottom: 10px; /* Adiciona espaçamento entre os itens do carrinho */
+}
+
+/* Botão de Remover no Carrinho */
+#cart-items button {
+  background-color: #FF0000; /* Cor vermelha */
+  color: white; /* Texto branco */
+  border: none; /* Remove a borda padrão */
+  padding: 5px 10px; /* Preenchimento interno */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 12px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor em forma de mãozinha */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+  margin-left: 10px; /* Move o botão para a direita */
+}
+
+/* Efeito ao passar o mouse */
+#cart-items button:hover {
+  background-color: #FF4D4D; /* Cor vermelha mais clara ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+/* Efeito quando pressionado */
+#cart-items button:active {
+  background-color: #CC0000; /* Cor vermelha mais escura quando pressionado */
+}
+
+
+
+/* Estilo para o botão fixo */
+#topo-btn {
+  position: fixed;
+  bottom: 100px; /* Distância maior do rodapé para que o botão fique mais alto */
+  right: 20px;
+  background-color: #8B4513; /* Tom de marrom */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px; /* Borda arredondada */
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#topo-btn:hover {
+  background-color: #A0522D; /* Marrom mais claro ao passar o mouse */
+}
+
+
 
 /* Global Styles */
 body {

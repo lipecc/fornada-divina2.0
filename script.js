@@ -109,3 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load cart on page load
     loadCart();
 });
+
+// Função para voltar ao topo do cardápio
+function voltarAoCardapio() {
+  const cardapio = document.getElementById("cardapio");
+  cardapio.scrollIntoView({ behavior: "smooth" });
+}

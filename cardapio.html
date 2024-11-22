@@ -10,6 +10,7 @@
     </head>
     <body>
         <header>
+            <div id="cardapio"> </div>
             <h1>Fornada Divina</h1>
             <p>Sabor em Cada Mordida</p>
             <div id="cart-icon">
@@ -18,7 +19,16 @@
             </div>
              <a href="index.html" class="back-button">↩</a>
         </header>
-    
+        
+        
+        <!-- Botão para voltar ao topo do cardápio -->
+          <button 
+            id="topo-btn" 
+            onclick="voltarAoCardapio()" 
+            style="position: fixed; bottom: 20px; right: 20px;">
+              ⬆️ Topo
+          </button>
+        
         <nav>
             <ul>
                 <li><a href="#pães">Pães</a></li>
